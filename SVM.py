@@ -17,7 +17,7 @@ x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y
 classes = ["malignant", "benign"]
 
 # Creating the model
-clas = svm.SVC(kernel="linear")
+clas = svm.SVC(kernel="linear") #using linear in the kernel function. 
 clas.fit(x_train, y_train)
 prediction = clas.predict(x_test)
 accuracy = metrics.accuracy_score(y_test, prediction)
